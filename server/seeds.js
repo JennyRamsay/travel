@@ -1,5 +1,5 @@
 const convert = require('xml-js');
-const xml = require('fs').readFileSync('/flightdata_A.xml', 'utf8');
+const xml = require('fs').readFileSync('./flightdata_A.xml', 'utf8');
 
 const result = convert.xml2json(xml, {compact: true, spaces: 4});
 const jsonResult = JSON.parse(result)
