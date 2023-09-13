@@ -3,7 +3,7 @@ import FlightList from '../components/FlightList'
 
 const MainContainer = () => {
 
-  const [flights] = useState([])
+  const [flights, setFlights] = useState([])
 
   useEffect(() => {
     fetchFlights()
@@ -11,7 +11,8 @@ const MainContainer = () => {
 
   const fetchFlights = () => {
     fetch('http://localhost:9000/api/flights')
-    .then(res => res.json())
+    .then(response => response.json())
+    .then(flights => setFlights(flights));
   }
 
 

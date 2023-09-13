@@ -1,13 +1,9 @@
 const FlightList = ({ flights }) => {
     return (
-      <div id="flight-list">
+      <div>
         <h2>Flight List goes here!</h2>
         <ul>
-          {flights.map((flight, index) => {
-            return (
-              <li key={index}>{flight._attributes} </li>
-            )
-          })}
+          WHY WONT YOU WORK
         </ul>
       </div>
     )
