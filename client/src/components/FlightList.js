@@ -3,7 +3,9 @@ const FlightList = ({ flights }) => {
       <div>
         <h2>Flight List goes here!</h2>
         <ul>
-          WHY WONT YOU WORK
+          {flights.map((flight, id) => (
+            <li key={id}>{flight._id} </li>
+            ))}
         </ul>
       </div>
     )
