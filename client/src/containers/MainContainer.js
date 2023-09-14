@@ -50,9 +50,10 @@ const MainContainer = () => {
       }, 0);
     
       const averageJourneyTime = totalJourneyTime / lhrToDxbFlights.length;
+      // 1 minute = 60000 milliseconds
 
       const formatMilliseconds = (milliseconds) => {
-        const totalMinutes = Math.floor(milliseconds / 60000); // 1 minute = 60000 milliseconds
+        const totalMinutes = Math.floor(milliseconds / 60000); 
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
         return `${hours} hours ${minutes} minutes`;
