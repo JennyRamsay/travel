@@ -20,7 +20,6 @@ const MainContainer = () => {
       const departureTime = parseInt(flight._attributes.indeparttime.split(':')[0], 10);
       return departureTime < 12;
     });
-    console.log(morningFlights)
 
     const swedenFlights = flights.filter(flight => {
       return flight._attributes.destair === 'ARN'; // Assuming ARN is Stockholm Arlanda Airport
@@ -66,17 +65,18 @@ const MainContainer = () => {
     <h1>ALL THE FLIGHTS!</h1>
     <div className='card'>
       
-      <h1>Total Flights: {flights.length}</h1>
+      <p>Total Flights: {flights.length}</p>
+      <p>Average Journey Time LHR to DXB: {formatMilliseconds(averageJourneyTime)}</p>
       <p>Morning Flights: {morningFlights.length}</p>
       <p>Flights to Sweden: {swedenFlights.length}</p>
-      <h2>Top 10 Destination Airports</h2>
+      <h1>Top 10 Destination Airports</h1>
       <ul>
         {topDestinations.map(([airport, count]) => (
           <li key={airport}>{airport}: {count} flights</li>
         ))}
       </ul>
       {/* <p>Average Journey Time LHR to DXB: {averageJourneyTime.toFixed(2)} milliseconds</p> */}
-      <p>Average Journey Time LHR to DXB: {formatMilliseconds(averageJourneyTime)}</p>
+      
 
       <FlightList flights={flights} />
     </div>
