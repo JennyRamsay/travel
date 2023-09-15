@@ -63,7 +63,9 @@ const MainContainer = () => {
 
   return (
     <>
-      <h1>ALL THE FLIGHTS!</h1>
+    <h1>ALL THE FLIGHTS!</h1>
+    <div className='card'>
+      
       <h1>Total Flights: {flights.length}</h1>
       <p>Morning Flights: {morningFlights.length}</p>
       <p>Flights to Sweden: {swedenFlights.length}</p>
@@ -77,6 +79,7 @@ const MainContainer = () => {
       <p>Average Journey Time LHR to DXB: {formatMilliseconds(averageJourneyTime)}</p>
 
       <FlightList flights={flights} />
+    </div>
     </>
   )
 }

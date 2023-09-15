@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+body{
+  font-family: "Helvetica", arial, sans-serif; font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* :root {
+  font-size: 20px;
+  box-sizing: inherit;
+} */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  min-height: 100vh;
+  padding: 30px;
+  
+  color: #224;
+  background:
+    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+    center / cover no-repeat fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  max-width: 600px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+  max-width: 1500px;
+  height: 600px;
+  padding: 10px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
 }
+
+
